@@ -1,0 +1,8 @@
+lint_notebooks:
+  stage: test
+  image: python:3.10
+  script:
+    - pip install nbqa flake8
+    - nbqa flake8 notebooks/
+  only:
+    - experiment

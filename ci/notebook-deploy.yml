@@ -1,0 +1,13 @@
+deploy_notebooks_to_gcs:
+  stage: deploy
+  image: google/cloud-sdk:alpine
+  script:
+    - gsutil -m cp -r notebooks/* gs://colab-notebooks-${project_id}/
+  only:
+    - experiment
+  variables:
+    project_id: ai-platform-mockup
+  before_script:
+    - echo $GCLOUD_SERVICE_KEY | base64 -d > ${CI_PROJECT_DIR}/gcloud-service-key.json
+    - gcloud auth activate-service-account --key-file=${CI_PROJECT_DIR}/gcloud-service-key.json
+    - gcloud config set project $project_id

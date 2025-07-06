@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  database: dataform.projectConfig.defaultDatabase,
+  schema: "pipeline_1",
+  name: "enrich_1",
+  tags: ["pipeline_1"],
+  vars: {
+    "model": "dataset_id.model_id"
+  }
+}
+
+SELECT *,
+FROM ML.PREDICT(MODEL ${dataform.projectConfig.vars.model},
+    (SELECT * FROM ${ref("staging_1")})
+)
+

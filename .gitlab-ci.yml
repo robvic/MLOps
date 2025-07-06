@@ -1,0 +1,20 @@
+stages:
+  - infra
+  - test
+  - build
+  - deploy
+
+include:
+  - local: 'ci/terraform-apply.yml'
+  - local: 'ci/notebook-unittest.yml'
+  - local: 'ci/notebook-integratedtest.yml'
+  - local: 'ci/notebook-deploy.yml'
+  - local: 'ci/component-unittest.yml'
+  - local: 'ci/pipeline-integratedtest.yml'
+  - local: 'ci/pipeline-compile.yml'
+  - local: 'ci/pipeline-config.yml'
+  - local: 'ci/model-deploy.yml'
+  - local: 'ci/model-rollout.yml'
+  - local: 'ci/dataform-integratedtest.yml'
+  - local: 'ci/dataform-deploy.yml'
+  - local: 'ci/trigger-retrain.yml'

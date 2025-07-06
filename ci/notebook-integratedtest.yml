@@ -1,0 +1,11 @@
+notebook_test:
+  stage: test
+  image: python:3.10
+  script:
+    - pip install nbconvert nbformat ipykernel
+    - |
+      for notebook in notebook/*.ipynb; do
+        jupyter nbconvert --to notebook --execute "$notebook" --output /dev/null
+      done
+  only:
+    - experiment

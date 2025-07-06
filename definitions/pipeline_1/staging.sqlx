@@ -1,0 +1,16 @@
+config {
+  type: "table",
+  database: dataform.projectConfig.defaultDatabase,
+  schema: "pipeline_1",
+  name: "staging_1",
+  tags: ["pipeline_1"],
+  vars: {
+    "origin": "project_id.dataset_id.table_id"
+  }
+}
+
+SELECT
+    a AS X,
+    b AS Y1,
+    c AS Y2
+FROM ${dataform.projectConfig.vars.origin}

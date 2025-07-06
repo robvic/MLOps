@@ -1,0 +1,7 @@
+{
+    "defaultSchema": "misc",
+    "assertionSchema": "dataform_assertions",
+    "warehouse": "bigquery",
+    "defaultDatabase": "ai-platform-mockup",
+    "defaultLocation": "US"
+}  

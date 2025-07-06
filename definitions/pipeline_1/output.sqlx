@@ -1,0 +1,10 @@
+config {
+  type: "table",
+  database: dataform.projectConfig.defaultDatabase,
+  schema: "pipeline_1",
+  name: "output_1",
+  tags: ["pipeline_1"],
+}
+
+SELECT * 
+FROM ${ref("output_1")}

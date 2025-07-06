@@ -1,0 +1,10 @@
+# Artefatos
+docs/*.bkp
+
+# Arquivos Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Workflow Actions
+.github/workflows/*.yml
