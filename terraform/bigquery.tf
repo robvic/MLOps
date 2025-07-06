@@ -43,6 +43,7 @@ resource "google_bigquery_job" "mockup_table" {
             dataset_id = google_bigquery_dataset.staging.dataset_id
             table_id   = "p1_county_natality"
             }
+        create_disposition = "CREATE_IF_NEEDED"
         write_disposition = "WRITE_TRUNCATE"
         use_legacy_sql    = false
         }    

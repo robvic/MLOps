@@ -4,7 +4,7 @@
 
 resource "google_workbench_instance" "instance" {
     name = "notebook-instance-1"
-    location = var.location
+    location = var.region
     gce_setup {
       container_image {
         repository = "us-docker.pkg.dev/jupyter/base-notebook:x86_64-ubuntu-22.04" # Alterar para imagem básica de Jupyter Notebook

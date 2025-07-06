@@ -5,6 +5,7 @@ docs/*.bkp
 *.tfstate
 *.tfstate.backup
 .terraform/
+*.tfvars
 
 # Workflow Actions
 .github/workflows/*.yml

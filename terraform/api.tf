@@ -13,3 +13,7 @@ resource "google_project_service" "data_catalog" {
 resource "google_project_service" "dataproc" {
     service = "dataproc.googleapis.com"
 }
+
+resource "google_project_service" "secretapi" {
+    service = "secretmanager.googleapis.com"
+}

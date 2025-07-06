@@ -58,7 +58,7 @@ resource "google_dataform_repository_workflow_config" "workflow_config_1" {
   region         = var.region
   repository     = google_dataform_repository.dataform_repository.name
   name           = "pipeline_1_workflow"
-  release_config = google_dataform_repository_release_config.release_config.id
+  release_config = google_dataform_repository_release_config.release_config_1.id
 
   invocation_config {
     transitive_dependencies_included         = true
