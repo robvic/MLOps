@@ -9,3 +9,4 @@ docs/*.bkp
 
 # Workflow Actions
 .github/workflows/*.yml
+terraform/terraform.tfvars
